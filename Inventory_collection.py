@@ -13,7 +13,7 @@ session.verify = False
 # This is not recommended in a production environment.
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# f=open("C:\\Users\\Seenu_Perumal\\Python Learning\\credentials.txt","r")
+# f=open("PATH\\credentials.txt","r")
 # lines=f.readlines()
 # user=lines[0]
 # print(type(user))
@@ -22,7 +22,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # f.close()
 
 # Connect to a vCenter Server using username and password
-vsphere_client = create_vsphere_client(server='vcsa.bngvxrail.com', username='Test123@vsphere.local', password='Test@123')
+vsphere_client = create_vsphere_client(server='VC FQDN', username='USERNAME', password='PASSWORD')
 
 # List all VMs inside the vCenter Server
 
@@ -65,7 +65,7 @@ for vms in vm_IDs:
 
 print("printing VM details now : ", vm_details)
 
-with open('C:\\Users\\Seenu_Perumal\\Python3.csv', mode='w', newline='') as file:
+with open('PATH\\Python3.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['Name', 'Power State', 'Memory', 'CPU', 'Guest OS'])
     for vms in vm_details:
